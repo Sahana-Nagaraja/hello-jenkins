@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building from the test-branch..'
                 sh 'mvn -DskipTests clean package'
             }
         }
@@ -17,7 +17,7 @@ pipeline {
         */
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing from the test-branch..'
                 sh 'mvn test'
             }
         }
